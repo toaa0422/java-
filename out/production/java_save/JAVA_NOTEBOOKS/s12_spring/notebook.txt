@@ -1,0 +1,18 @@
+【Spring介绍】
+
+     Spring Framework 是一个开源的Java／Java EE全功能栈（full-stack）的应用程序框架，以Apache许可证形式发布，也有.NET平台上的移植版本。该框架基于 Expert One-on-One Java EE Design and Development（ISBN 0-7645-4385-7）一书中的代码，最初由 Rod Johnson 和 Juergen Hoeller等开发。Spring Framework 提供了一个简易的开发方式，这种开发方式，将避免那些可能致使底层代码变得繁杂混乱的大量的属性文件和帮助类。
+
+     控制反转（Inversion of Control，缩写为IoC），是面向对象编程中的一种设计原则，可以用来减低计算机代码之间的耦合度。其中最常见的方式叫做依赖注入（Dependency Injection，简称DI），还有一种方式叫“依赖查找”（Dependency Lookup）。通过控制反转，对象在被创建的时候，由一个调控系统内所有对象的外界实体，将其所依赖的对象的引用传递给它。也可以说，依赖被注入到对象中。
+
+【依赖注入】
+
+     在学习Spring的时候，总是会遇到这个名词，就是依赖注入，所以首先学习什么是依赖注入。通过几个例子，说明什么是依赖注入，什么是spring下的依赖注入。
+
+     我们举一个Person开car的例子，希望通过这个例子可以更好的学习和理解什么是依赖注入。当然举得例子都是很简单的情形，在实际项目中可能要比这些复杂的多。
+
+
+定义三个类，Person.java、BaoMa.java、MainTest.java。如下面的代码，Person在它的构造函数中创建了Baoma对象，这就让Person类和Baoma类紧密的耦合在了一起，
+而且现在Person类只能开宝马，如果现在想要开奥迪，Person类是不能够处理的，除非修改Person这个类，这就使得两个类在紧耦合的情况下逻辑变得不够清晰，如果业务逻辑复杂，
+这些紧耦合的情形就会更多，带来代码难以测试，难以复用，难以理解等很多弊端。再加上让Person类来管理Baoma类的对象创建也是不合理的，因为面向对象的思想来说，
+Person类是没有管理Baoma类的对象的职责的。
+
